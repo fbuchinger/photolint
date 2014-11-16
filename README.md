@@ -46,4 +46,4 @@ photolint comes with a default set of quality checks, but was designed to be ver
 "requirecopyright": false //IPTC copyright tag must be set
 }
 ```
-More on the configuration settings coming soon
+TODO: add an exhaustive list of photolint quality checks and their options
