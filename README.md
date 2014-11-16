@@ -34,7 +34,7 @@ Configuration
 -------------
 photolint comes with a default set of quality checks, but was designed to be very configurable. You can configure its behaviour by putting a ``.photolint`` file into the base directory of your photo collection, which is actually a json file that turns quality checks on/off or configures them:
 
-```json
+```
 {
 "folderpattern": "YYYY-MM-DD_%s", //required naming pattern for folders containing photos
 "minjpegquality": 70, //minimum encoding quality for jpegs [0..100]
