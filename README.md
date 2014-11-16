@@ -32,4 +32,18 @@ Note: the `-r` option tells photolint to scan recursively through your photo col
 
 Configuration
 -------------
-photolint comes with a default set of quality checks, but was designed to be very configurable.
+photolint comes with a default set of quality checks, but was designed to be very configurable. You can configure its behaviour by putting a ``.photolint`` file into the base directory of your photo collection, which is actually a json file that turns quality checks on/off or configures them:
+
+```
+{
+"folderpattern": "YYYY-MM-DD_%s", //required naming pattern for folders containing photos
+"minjpegquality": 70, //minimum encoding quality for jpegs [0..100]
+"nodupes": true, //check for binary identical duplicates in the same folder
+"untampered": false, //allow only non-modified photos directly as they come from your camera
+"anticorrupt": false, //check for corrupted files (e.g. due to memory card writing errors)
+"filepattern": "fromcamera", //check if the photo file still carries the filename from camera
+"noexif": false, //only allow images without exif metadata
+"requirecopyright": false //IPTC copyright tag must be set
+}
+```
+More on the configuration settings coming soon
