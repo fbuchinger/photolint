@@ -36,12 +36,12 @@ photolint comes with a default set of quality checks (validators), but was desig
 
 ```
 {
-"folderpattern": "YYYY-MM-DD_%s", 
+"folderpattern": "%Y-%m-%d_%s", 
 "minjpegquality": 70,
 "nodupes": true,
 "untampered": false,
 "anticorrupt": false,
-"filepattern": "fromcamera",
+"filepattern": "dcf",
 "noexif": false,
 "requirecopyright": false
 }
@@ -53,11 +53,10 @@ Validators
 -----------
 
 ### `folderpattern`
-required naming pattern for folders containing photos, e.g. "YYYY-MM-DD_%s"
+Use this pattern to ensure a consistent naming of all your photo folders, e.g. `2014-11-27_Paris`. The pattern can either be a regular expression or a [strptime-parseable date pattern](https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior), such as `%Y-%m-%d_%s` (Note: the `%s` placeholder denotes an arbitrary string).
 
 ### `filepattern`
-required naming pattern for folders containing photos, e.g. "YYYY-MM-DD_%s"
-"fromcamera"
+Use this pattern to ensure a consistent naming of all photo files, e.g. `P8175804.ORF`. To accomplish this, you can either specify the pattern in [fnmatch](https://docs.python.org/2/library/fnmatch.html#module-fnmatch) or [regex](https://docs.python.org/2/library/re.html) format. If you want to enforce [DCF](http://en.wikipedia.org/wiki/Design_rule_for_Camera_File_system) you can use the `dcf` pattern  All files that will not match the pattern will be reported. 
 
 ### `minjpegquality`
 minimum encoding quality for jpegs [0..100]
