@@ -16,6 +16,7 @@ More specifically ``photolint`` allows you to enforce a quality standard regardi
 
 Usage
 -----
+NOTE: photolint isn't available yet, this sector just illustrates the future usage.
 First, install photolint by downloading it or installing it via [pip](https://pip.pypa.io/):
 ```
 pip install photolint
