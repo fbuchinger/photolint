@@ -59,19 +59,20 @@ Use this pattern to ensure a consistent naming of all your photo folders, e.g. `
 Use this pattern to ensure a consistent naming of all photo files, e.g. `P8175804.ORF`. To accomplish this, you can either specify the pattern in [fnmatch](https://docs.python.org/2/library/fnmatch.html#module-fnmatch) or [regex](https://docs.python.org/2/library/re.html) format. If you want to enforce [DCF](http://en.wikipedia.org/wiki/Design_rule_for_Camera_File_system) you can use the `dcf` pattern  All files that will not match the pattern will be reported. 
 
 ### `minjpegquality`
-minimum encoding quality for jpegs [0..100]
+this validator tries to identify the jpeg compression quality by using [JPEG DQT Digests](http://search.cpan.org/dist/Image-ExifTool/lib/Image/ExifTool/JPEGDigest.pm) and reports images that are below the threshold (0..100). Use this validator to ensure a minimum compression quality in your photo collection.
 
 ### `untampered`
-allow only non-modified photos directly as they come from your camera
+reports photos that have been modified in an image processor by performing metadata analysis. Useful if you want to archive the original images from your camera and make sure they haven't been been modified.
 
 ### `anticorrupt` 
-check for corrupted files (e.g. due to memory card writing errors)
+this validator reports corrupted files (e.g. due to memory card writing errors).
 
 ### `noexif`
-only allow images without exif metadata
+use this validator to ensure that your photos are free from exif metadata (e.g. before handing them over to the client)
 
 ### `requirecopyright`
-IPTC copyright tag must be set
+use this validator to ensure that all your photos contain the IPTC copyright tag.
 
+... MORE VALIDATORS TO COME SOON...
 
 
